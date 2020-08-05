@@ -10,11 +10,27 @@
     <title>Vue Router Practice</title>
 </head>
 <body>
-    <div id="app">
+    <!-- 1 -->
+    <!-- 使用 new Vue({
+        render: h => h(App)
+    }).$mount('#app') -->
+    <div id="app"></div>
 
-    </div>
 
+    <!-- .2 -->
+    <!-- 使用 new Vue({ 
+        el: '#app'
+    }) 時 , 而不是 「 使用 APP.vue , 並掛到 div#app 上 」 -->
+    <!-- <div id="app">
+        <nav class="nav">
+            <router-link to="/home" class="nav__router-link">home</router-link> |
+            <router-link to="/about" class="nav__router-link">about</router-link>
+        </nav>
+
+        <router-view/>
+    </div> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.2.0/vue-router.js'></script>
+    <script src="./src/main.js"></script>
 </body>
 </html>

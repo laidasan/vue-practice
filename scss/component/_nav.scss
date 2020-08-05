@@ -1,0 +1,13 @@
+.nav {
+    text-align: center;
+    margin-top: 120px;
+    &__router-link {
+        @include link {
+            @include font(3,0,1);
+            text-decoration: none;
+            padding-left: nth($p,1);
+            padding-right: nth($p,1);
+            color: #42b983;
+        }
+    }
+}
