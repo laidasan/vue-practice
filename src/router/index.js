@@ -1,10 +1,12 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import User from '../views/User.vue'
 
 
 // 如果是用 import Vue from 'Vue' 這種方式引入 Vue 就必須要加入這段
-// Vue.use(VueRouter)
+Vue.use(VueRouter)
 
 const routes = [
     { path: '/', component: Home , name: 'Home'},

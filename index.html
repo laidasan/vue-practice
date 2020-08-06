@@ -29,8 +29,19 @@
 
         <router-view/>
     </div> -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.2.0/vue-router.js'></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.2.0/vue-router.js'></script> -->
     <script src="./src/main.js"></script>
+    <script>
+        let o = {p:12 , a: 30}
+        let {p,a} = o
+        let {p:first,a:second} = o;
+        [thep,thea] = [o.p,o.a]
+        console.log(p,a)
+        console.log(first , second)
+        console.log(thep,thea)
+
+        // [a,b,c] = [element.offsetTop,element.offsetLeft,element.offsetWidth]
+    </script>
 </body>
 </html>

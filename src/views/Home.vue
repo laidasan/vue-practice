@@ -1,13 +1,29 @@
 <template>
     <div class="home">
-        <hello-world></hello-world>
-        <h1>{{ name }}</h1>
+        <hello-world v-slot:default="{ user }">
+            <!-- <h1 style="padding: 30px;" @click="showSlotProps($event,myProps)">{{ myProps.user.age }}<h1> -->
+            <h1 style="padding: 30px;" @click="showSlotProps($event,user)">{{ user.age }}<h1>
+
+            <!-- <a href="javascript:;" class="btn-a">{{ name }}</a> -->
+            <!-- <a href="javascript:;" class="btn-a"></a> -->
+            <!-- <template v-slot:header>
+                <h1>header</h1>
+            </template>
+            <template v-slot:footer>
+                <h1>footer</h1>
+            </template> -->
+            <!-- {{ user.age }} -->
+            <!-- <template v-slot:default="myProps" >
+                <h1 style="padding: 30px;" @click="showSlotProps($event,myProps)">{{ myProps.user.age }}<h1>
+            </template> -->
+        </hello-world>
+        <!-- <h1>{{ name }}</h1> -->
         <a href="javascript:;" class="btn-a" @click="show">Show</a>
     </div>
 </template>
 
 <script>
-import helloWorld from '../components/HelloWorld'
+import HelloWorld from '../components/HelloWorld'
 
 export default {
     beforeRouteEnter(to,from,next) {
@@ -21,16 +37,17 @@ export default {
     },
     data() {
         return {
-            name: 'Home'
+            name: 'this name is in Home.Vue'
         }
     },
     components: {
-        helloWorld
+        HelloWorld
     },
     methods: {
         show() {
             console.log('route\n',this.$route,'router\n',this.$router)
-        }
+        },
+        showSlotProps(e,slotProp) { console.log(slotProp) }
     }
 }
 </script>
